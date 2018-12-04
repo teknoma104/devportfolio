@@ -25,7 +25,7 @@ const AboutPage = () => {
                         </p>
                         <p>
                             Even though I am new to the web development world, I am enjoying my stay here! My recent adventures includes learning about HTML, CSS, Bootstrap, Javascript, jQuery, Node.js, Express, MySQL, MongoDB, and React which lead up to learning about the MERN stack.
-                            I had <span className="highlight">AWESOME</span> TAs and instructors that encouraged my learning at SMU's Coding Boot Camp. Check out my portfolio below for some of the projects I've worked on and uploaded to GitHub. Enjoy your stay! :)
+                            I had <span className="highlight">AWESOME</span> fellow classmates, TAs and instructors that encouraged my learning at SMU's Coding Boot Camp. Check out my portfolio below for some of the projects I've worked on and uploaded to GitHub. Enjoy your stay! :)
                         </p>
                         <p>
                             This simple landing site was built using React via Facebook's Create-React-App with responsive style using SASS/CSS.
