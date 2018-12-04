@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { toElement as scrollToElement } from '../../utils/scroll';
 
 import './style.scss';
@@ -12,28 +11,19 @@ class ScrollToPrevious extends Component {
   }
 
   render() {
-    const { theme: { colorPrimary } } = this.context;
 
     return (
       <div
         className="scroll-to-previous"
         onClick={(e) => this.scrollToPrevious()}
       >
-        <div className="arrow bounce" style={{ color: colorPrimary }}>
+        <div className="arrow bounce" style={{ color: '#FFFFFF' }}>
           <button className="fas fa-chevron-up fa-2x" href="#" />
-          <div className="scroll-text">Click Me</div>
+          <div className="scroll-text">Go Up</div>
         </div>
       </div>
     );
   }
 }
-
-ScrollToPrevious.propTypes = {
-  pageSelector: PropTypes.string
-};
-
-ScrollToPrevious.contextTypes = {
-  theme: PropTypes.any
-};
 
 export default ScrollToPrevious;

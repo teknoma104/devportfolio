@@ -2,6 +2,7 @@
 $border-radius: 2px;
 
 .portfolio-item {
+  z-index: 10;
   display: flex;
   flex-direction: column;
   margin: 0.5rem 0;

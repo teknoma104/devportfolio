@@ -1,22 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './style.scss';
 
-const PortfolioItem = (props, context) => {
-  const { theme: { colorPrimary, textAlternate } } = context;
+const PortfolioItem = (props) => {
 
   if (props.render) return props.render;
   else
     return (
       <div
         className="portfolio-item"
-        style={{ backgroundColor: colorPrimary, color: textAlternate }}
       >
-        <div className="portfolio-item__title">Badass</div>
+        <div className="portfolio-item__title">Default</div>
 
         <div className="portfolio-item__desc">
-          I do badass things and kickass everyday! I do badass things and
-          kickass everyday! I do badass things and kickass everyday!
+          Insert Default Dev Project
         </div>
         <div className="portfolio-item__icon">
           <i className="fab fa-js" />
@@ -29,10 +25,6 @@ const PortfolioItem = (props, context) => {
         </div>
       </div>
     );
-};
-
-PortfolioItem.contextTypes = {
-  theme: PropTypes.any
 };
 
 export default PortfolioItem;

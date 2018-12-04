@@ -1,65 +1,44 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ScrollToNext from '../../components/ScrollToNext';
 import './style.scss';
 
-const AboutPage = (props, context) => {
-  const {
-    theme: { colorPrimary, colorHighlight, bgPrimary, textPrimary }
-  } = context;
-
-  return (
-    <div className="about-page" style={{ backgroundColor: bgPrimary }}>
-      <style jsx="true">
-        {`
+const AboutPage = () => {
+    return (
+        <div className="about-page" style={{ backgroundColor: '#455A64' }}>
+            <style jsx="true">
+                {`
           .highlight {
-            background-color: ${colorHighlight};
+            background-color: #374850;
           }
           ::selection {
-            background-color: ${colorHighlight};
+            background-color: #374850;
           }
         `}
-      </style>
-      <div className="content-grid">
-        <h1 style={{ color: colorPrimary }}>About</h1>
-        <div className="about-wrapper">
-          <div className="about-content" style={{ color: textPrimary }}>
-            <p>
-              I like <span className="highlight">JavaScript</span> and
-              everything web.
-            </p>
-            <p>
-              When my dev senses kick-in I build presumably{' '}
-              <span className="highlight"> awesome stuff</span>. I stay close to
-              the community and try to keep tabs with the pace at which the web
-              is evolving. I also like to{' '}
-              <span className="highlight">blog</span> what I learn.
-            </p>
-            <p>
-              I built this site <span className="highlight">from scratch</span>.
-              By scratch, I mean <i>absolutely from scratch</i>{' '}
-              <span className="highlight">
-                without any UI library/framework
-              </span>{' '}
-              (except React though) and had so much fun along the way.
-            </p>
-            <p>
-              React-Redux, Node.js, Ruby on Rails, Java, Spring Boot, Docker and
-              AWS are the main tricks up my sleeve. I am also obsessed with making the web look pretty with SASS/CSS.
-            </p>
-            <p className="text-emoji" style={{ color: colorPrimary }}>
-              \ (•◡•) /
-            </p>
-          </div>
+            </style>
+            <div className="content-grid">
+                <h1 style={{ color: '#FFFFFF' }}>About</h1>
+                <div className="about-wrapper">
+                    <div className="about-content" style={{ color: '#FAFAFA' }}>
+                        <p>
+                            I recently graduated from <a target="_blank" rel="noopener noreferrer" href="https://techbootcamps.smu.edu/" style={{ color: '#3DC0B0' }}>SMU's Coding Boot Camp</a> in 2018 and developed a liking to  <span className="highlight">JavaScript</span> and
+                            everything web.
+                        </p>
+                        <p>
+                            Even though I am new to the web development world, I am enjoying my stay here! My recent adventures includes learning about HTML, CSS, Bootstrap, Javascript, jQuery, Node.js, Express, MySQL, MongoDB, and React which lead up to learning about the MERN stack.
+                            I had <span className="highlight">AWESOME</span> TAs and instructors that encouraged my learning at SMU's Coding Boot Camp. Check out my portfolio below for some of the projects I've worked on and uploaded to GitHub. Enjoy your stay! :)
+                        </p>
+                        <p>
+                            This simple landing site was built using React via Facebook's Create-React-App with responsive style using SASS/CSS.
+                        </p>
+                        <p>
+                            In my free time I enjoy gaming with my friends online! Blizzard's Overwatch and Capcom's Monster Hunter World are my current gaming obsession. I also enjoy building Gundam and Zoid models as well as playing ping pong and reading the latest comic book issues. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <ScrollToNext pageSelector=".portfolio-page" />
         </div>
-      </div>
-      <ScrollToNext pageSelector=".portfolio-page" />
-    </div>
-  );
-};
-
-AboutPage.contextTypes = {
-  theme: PropTypes.any
+    );
 };
 
 export default AboutPage;

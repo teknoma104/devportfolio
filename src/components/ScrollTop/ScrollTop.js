@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { toTop as scrollToPageTop } from '../../utils/scroll';
 
 import './style.scss';
@@ -32,13 +31,12 @@ class ScrollTop extends Component {
   }
 
   render() {
-    const { theme: { colorPrimary } } = this.context;
     const hideArrowClass = this.state.shouldShowScrollTopArrow ? '' : 'hide';
     return (
       <div className="scroll-top" onClick={(e) => scrollToPageTop()}>
         <div
           className={`arrow ${hideArrowClass}`}
-          style={{ color: colorPrimary }}
+          style={{ color: '#FFFFFF' }}
         >
           <button className="fas fa-angle-double-up fa-2x" href="#" />
           <div className="to-top">To Top</div>
@@ -47,9 +45,5 @@ class ScrollTop extends Component {
     );
   }
 }
-
-ScrollTop.contextTypes = {
-  theme: PropTypes.any
-};
 
 export default ScrollTop;
