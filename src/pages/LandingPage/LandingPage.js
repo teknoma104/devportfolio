@@ -17,6 +17,9 @@ const LandingPage = () => {
             Aspiring Full Stack Dev | Seeker of Knowledge | Video Game & Comic Book Enthusiast
           </div>
           <SocialIcons />
+          <div>
+            Email:  tommy.minh.le.469@gmail.com
+          </div>
         </div>
       </main>
       <ScrollToNext pageSelector=".about-page" />
