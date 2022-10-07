@@ -1,14 +1,29 @@
-import React from 'react';
-import Particles from 'react-particles-js';
+import { useCallback } from "react";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 import './style.scss';
 
 const ParallaxBackground = () => {
+    const particlesInit = useCallback(async (engine) => {
+        console.log(engine);
+        // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+        // starting from v2 you can add only the features you need reducing the bundle size
+        await loadFull(engine);
+      }, []);
+    
+      const particlesLoaded = useCallback(async (container) => {
+        await console.log(container);
+      }, []);
 
     return (
         <div className="parallax" style={{ color: '#FFFFFF' }}>
             <Particles
+                id="tsparticles"
+                init={particlesInit}
+                loaded={particlesLoaded}
                 className="bubble-particles"
-                params={{
+                options={{
                     "particles": {
                         "number": {
                             "value": 160,
@@ -30,6 +45,7 @@ const ParallaxBackground = () => {
                         "move": {
                             "random": true,
                             "speed": 1,
+                            "enable": true,
                             "direction": "top",
                             "out_mode": "out"
                         }

@@ -20,7 +20,7 @@ const AboutPage = () => {
                 <div className="about-wrapper">
                     <div className="about-content" style={{ color: '#FAFAFA' }}>
                         <p>
-                            I recently graduated from <a target="_blank" rel="noopener noreferrer" href="https://techbootcamps.smu.edu/" style={{ color: '#3DC0B0' }}>SMU's Coding Boot Camp</a> in 2018 and developed a liking to  <span className="highlight">JavaScript</span> and
+                            I graduated from <a target="_blank" rel="noopener noreferrer" href="https://techbootcamps.smu.edu/" style={{ color: '#3DC0B0' }}>SMU's Coding Boot Camp</a> in 2018 and developed a liking to  <span className="highlight">JavaScript</span> and
                             everything web.
                         </p>
                         <p>
